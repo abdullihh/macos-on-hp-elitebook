@@ -34,7 +34,7 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 | Internal audio / speakers | ✅ Working | The correct output appears as the second **Internal Speaker** entry in Sound settings. |
 | Intel Wi-Fi | ✅ Working | Wi-Fi works from the native macOS WiFi menu. |
 | Bluetooth | ✅ Working | Works. Sometimes external mice can cause problems but that's Apple's fault |
-| Battery status | ✅ Working | Battery information is detected by macOS. Verify percentage, charging, and battery-health reporting. |
+| Battery status | ✅ Working | Battery information and percentage/charging status is detected by macOS. |
 | Lid close / display sleep | ✅ Working | The display turns off when the lid is closed. |
 | Wake after opening lid | 🟡 Partially working | Opening the lid alone did not reliably wake the display; keyboard input could wake it. |
 | Keyboard | ✅ Working | Brightness/volume keys also function perfectly |
