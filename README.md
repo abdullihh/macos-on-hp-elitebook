@@ -1,4 +1,4 @@
-# HP EliteBook 1040 G7 — macOS 26 Tahoe
+# HP EliteBook 1040 G7 macOS 26 Tahoe
 
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
