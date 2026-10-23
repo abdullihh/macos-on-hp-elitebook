@@ -228,7 +228,3 @@ Thanks to the people and projects whose documentation, tools, patches, and troub
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
-
-## License and project notes
-
-`TODO: choose a license for your own documentation and original files. Review the licenses and redistribution terms of third-party tools and files before including them in this repository.`
