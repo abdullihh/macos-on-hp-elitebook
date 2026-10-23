@@ -8,13 +8,13 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 
 | Component | Specification |
 |---|---|
-| Laptop | HP EliteBook 1040 G7 |
+| Laptop | HP EliteBook x360 1040 G7 |
 | CPU | Intel Core i5-10310U (4 cores / 8 threads 1.7-4.4 GHz) |
 | Integrated graphics | Intel UHD Graphics 630 |
 | Memory | 16 GB dual-channel DDR4 |
 | Internal storage | 1 TB NVMe SSD |
 | Audio | Realtek ALC285 |
-| Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 |
+| Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
 | Display | 1080p IPS Touchscreen |
 | Camera | Intel HD Camera |
 | macOS version | macOS 26 Tahoe |
@@ -156,19 +156,18 @@ This section is a place to document the exact software, files, and configuration
 |---|---|---|
 | macOS | macOS 26 Tahoe | Record the exact build number from **About This Mac** / System Information. |
 | OpenCore | 1.0.8 *(reported)* | Verify the version in the published EFI. |
-| Configuration tool | OpenCore Simplify / ProperTree / other | `TODO: state the tool actually used and version` |
-| SMBIOS | MacBookPro16,2 *(reported)* | Never publish real serial numbers, MLB, ROM, or other unique identifiers. |
+| Configuration tool | OpenCore Simplify / OC Auxiliary Tools / OpenCore PKG | `TODO: state the tool actually used and version` |
+| SMBIOS | MacBookPro16,2 | 2020 13 Inch Macbook Pro |
 | `AAPL,ig-platform-id` | `00009B3E` *(reported)* | Confirm the current `DeviceProperties` value and data encoding. |
 | Audio `layout-id` | `71` *(reported)* | Confirm against the working `config.plist`. |
 | Boot arguments | `-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling` *(reported)* | Re-test each argument and remove anything no longer needed. |
-| USB mapping | USBToolBox workflow *(reported)* | Record the final map and physical port layout once verified. |
-| CPU power management | CPUFriend / CPUFriendDataProvider *(tested or being configured)* | Include only if present and working in the final EFI. |
+| USB mapping | USBToolBox Tool | Record the final map and physical port layout once verified. |
 
 ### Kernel extensions (kexts)
 
 List the **exact** kexts included in `EFI/OC/Kexts`, their versions, download/source links, purpose, and any dependencies. Remove rows that do not apply and add every kext in the final EFI.
 
-| Kext | Version / commit | Purpose | Source | Included / tested? |
+| Kext | Version | Purpose | Source | Included / tested? |
 |---|---|---|---|---|
 | `Lilu.kext` | `TODO` | Patching framework used by several plugins | `TODO` | `TODO` |
 | `VirtualSMC.kext` | `TODO` | SMC emulation | `TODO` | `TODO` |
@@ -177,8 +176,6 @@ List the **exact** kexts included in `EFI/OC/Kexts`, their versions, download/so
 | `AppleALC.kext` **or** chosen audio solution | `TODO` | Audio support, if used by this EFI | `TODO` | `TODO` |
 | `USBToolBox.kext` | `TODO` | USB mapping support, if used | `TODO` | `TODO` |
 | `UTBMap.kext` | `TODO` | USB port map, if used | `TODO` | `TODO` |
-| `CPUFriend.kext` | `TODO` | CPU power-management tuning, if used | `TODO` | `TODO` |
-| `CPUFriendDataProvider.kext` | `TODO` | Generated CPU power profile, if used | `TODO` | `TODO` |
 | `Other kexts` | `TODO` | `TODO` | `TODO` | `TODO` |
 
 ### ACPI files
@@ -196,35 +193,17 @@ List the **exact** kexts included in `EFI/OC/Kexts`, their versions, download/so
 | `OpenCanopy.efi` | Graphical boot picker, if included | Requires its matching resources and configuration. |
 | `Other drivers/tools` | `TODO` | `TODO` |
 
-### `config.plist` areas to document
-
-Describe only settings actually present in your final configuration, and explain why they are needed.
-
-- **ACPI:** `TODO`
-- **Booter quirks:** `TODO`
-- **Kernel quirks and kext order:** `TODO`
-- **DeviceProperties / iGPU:** `TODO`
-- **NVRAM / boot arguments:** `TODO`
-- **PlatformInfo / SMBIOS:** `TODO` *(redact unique identifiers)*
-- **UEFI drivers and quirks:** `TODO`
-- **USB map:** `TODO`
-- **Audio configuration:** `TODO`
-- **Power management:** `TODO`
-
 ### Hardware identifiers and useful diagnostics
 
 - PCI device IDs: `TODO`
-- Audio codec / layout details: `TODO`
+- Audio codec / layout details: `layout id 71`
 - USB controller and port map: `TODO`
 - Wi-Fi / Bluetooth chipset and firmware details: `TODO`
 - Relevant OpenCore logs or troubleshooting notes: `TODO`
 
-Do not publish personal data, full serial numbers, Apple account details, device UUIDs, or unredacted diagnostic logs that expose unique identifiers.
-
 ## Credits
 
-Thanks to the people and projects whose documentation, tools, patches, and troubleshooting made this build possible. Add the appropriate names and links, and specify what each contribution helped with.
-
+Thanks to the people and projects whose documentation, tools, patches, and troubleshooting made this build possible.
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
