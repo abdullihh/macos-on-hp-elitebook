@@ -33,16 +33,16 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 | Touchscreen | ✅ Working | Basic touch input and Gestures work; Srolling has to be done with two fingers |
 | Internal audio / speakers | ✅ Working | The correct output appears as the second **Internal Speaker** entry in Sound settings. |
 | Intel Wi-Fi | ✅ Working | Wi-Fi works from the native macOS WiFi menu. |
-| Bluetooth | 🧪 Verify | Add test results for pairing, audio devices, and sleep/wake behavior. |
+| Bluetooth | ✅ Working | Works. Sometimes external mice can cause problems but that's Apple's fault |
 | Battery status | ✅ Working | Battery information is detected by macOS. Verify percentage, charging, and battery-health reporting. |
 | Lid close / display sleep | ✅ Working | The display turns off when the lid is closed. |
 | Wake after opening lid | 🟡 Partially working | Opening the lid alone did not reliably wake the display; keyboard input could wake it. |
 | Keyboard | ✅ Working | Brightness/volume keys also function perfectly |
-| Trackpad and gestures | 🧪 Verify | Record pointer movement, click, scrolling, and multi-touch gesture support. |
+| Trackpad and gestures | ✅ Working | Pointer movement, click, scrolling, and multi-touch gesture support. |
 | Camera | ✅ Working | The camera is detected as USB hardware |
 | USB-A ports | ✅ Working | Complete USB mapping works |
 | USB-C / Thunderbolt | ✅ Working | Complete USB mapping works |
-| HDMI / external display | 🟡 Partially working | Native HDMI port does not but USB-C to HDMI converter works |
+| HDMI / external display | 🟡 Partially working | Native HDMI port does not but USB-C to HDMI converter and Airplay works |
 | Ethernet | ✅ Working  | Depends on the adapter or dock used. |
 | Sleep / standby | 🟡 Partially working  | Laptop successfully goes to sleep but waking up sometimes cause problems |
 | Microphone | ⛔ Not working | Internal microphone does not work. But USB mics work |
