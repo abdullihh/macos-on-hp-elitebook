@@ -2,7 +2,7 @@
 
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
-> **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration, not an official Apple or HP guide. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk, and do not copy another machine's SMBIOS serial numbers or other unique identifiers.
+> **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration, not an official Apple or HP guide. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
 
 ## Laptop specifications
 
@@ -52,7 +52,7 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 
 ### 1. Preparation
 
-- [ ] Confirm the exact laptop model and hardware revision.
+- [ ] Confirm the exact laptop model.
 - [ ] Back up personal files and create recovery/install media for existing operating systems.
 - [ ] Record the current BIOS/UEFI version and settings.
 - [ ] Download the required tools and files; document the source and version of each.
@@ -63,17 +63,11 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 - `TODO: add preparation notes`
 - `TODO: add links to required tools and official documentation`
 
-### 2. BIOS / UEFI configuration
-
-- [ ] Document each required BIOS/UEFI setting.
-- [ ] Note settings that must remain unchanged and how to restore defaults.
-- [ ] Add screenshots or photos where they make the settings easier to identify.
-
 **Settings used on this laptop:**
 
 - `TODO: add verified BIOS settings`
 
-### 3. Create the installer
+### 2. Create the installer
 
 - [ ] Document how to obtain the macOS installer/recovery files.
 - [ ] Document how to prepare the USB installer.
@@ -86,7 +80,7 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 2. `TODO`
 3. `TODO`
 
-### 4. Build and configure the EFI
+### 3. Build and configure the EFI
 
 - [ ] Explain how the EFI was generated or assembled.
 - [ ] Document the OpenCore version and configuration approach.
@@ -107,6 +101,12 @@ EFI/
 ```
 
 `TODO: explain which files are required and how to obtain/build them.`
+
+### 4. BIOS / UEFI configuration
+
+- [ ] 
+- [ ] Note settings that must remain unchanged and how to restore defaults.
+- [ ] Add screenshots or photos where they make the settings easier to identify.
 
 ### 5. Boot and install macOS
 
