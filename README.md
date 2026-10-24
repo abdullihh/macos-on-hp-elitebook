@@ -15,7 +15,7 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 | Internal storage | 1 TB NVMe SSD |
 | Audio | Realtek ALC285 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
-| Display | 1080p IPS Touchscreen |
+| Display | 14 Inch 1080p IPS Touchscreen |
 | Camera | Intel HD Camera |
 | macOS version | macOS 26 Tahoe |
 | Bootloader | OpenCore 1.0.8 |
@@ -56,16 +56,12 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 - [ ] Back up personal files and create recovery/install media for existing operating systems.
 - [ ] Record the current BIOS/UEFI version and settings.
 - [ ] Download the required tools and files; document the source and version of each.
-- [ ] Explain any prerequisites, risks, and required storage space.
+- [ ] This guide is for DualBooting macOS and Windows. Make sure you have at least 64GB free space on your SSD for macOS.
 
-**Notes / links:**
+**Download links:**
 
-- `TODO: add preparation notes`
-- `TODO: add links to required tools and official documentation`
-
-**Settings used on this laptop:**
-
-- `TODO: add verified BIOS settings`
+- `Download The latest MacOS.Tahoe.zip from [Release](https://github.com/abdullihh/macos-on-hp-elitebook/releases/)`
+- `Download [Rufus](https://rufus.ie/en/#download)`
 
 ### 2. Create the installer
 
