@@ -2,7 +2,7 @@
 
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
-> **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration, not an official Apple or HP guide. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
+> **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
 
 ## Laptop specifications
 
@@ -65,12 +65,12 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 
 ### 2. Create the installer
 
-- Extract the MacOS.Tahoe.zip.
-- Run the Download.bat inside the macrecovery folder and it should download the com.apple.recovery.boot folder.
-- Get an USB drive and open Rufus while it is plugged in.
-- Format the USB as Non-bootable, FAT32 and GPT.
-- Copy the EFI and com.apple.recovery.boot folders into the root of the USB drive.
-- 
+- Extract the **MacOS.Tahoe.zip**.
+- Run the Download.bat inside the **macrecovery** folder and it should download the **com.apple.recovery.boot** folder.
+- Get an USB drive and open **Rufus** while it is plugged in.
+- Format the USB as **Non-bootable, FAT32 and GPT**.
+- Copy the **EFI** and **com.apple.recovery.boot** folders into the root of the USB drive.
+
 **USB structure:**
 
 ```text
@@ -85,45 +85,38 @@ USB Drive/
 
 `TODO: explain which files are required and how to obtain/build them.`
 
+### 3. Partition Storage
+
+- Open Start menu and search **disk management** and press enter.
+- Right click the Partition you want to shrink and select **Shrink Volume**
+- Shrink it by the amount you want e.g. 65536MB for 64GB.
+- Right click on the unallocated space you created and select **New Simple Volume**.
+- Click next until you get to format screen and format it as **exFAT**.
+
 ### 4. BIOS / UEFI configuration
 
-- [ ] 
-- [ ] Note settings that must remain unchanged and how to restore defaults.
-- [ ] Add screenshots or photos where they make the settings easier to identify.
+- Restart the laptop and press **f10** repeatedly immediately when HP logo shows up. It should take to the BIOS.
+- Go to **Security -> Secure Boot Configuration** and disable Secure Boot.
+- Go to **Advanced -> Boot Options** then scroll down and move your USB drive to the top of boot priority.
+- Press esc then save and restart and it should boot into OpenCore Boot menu.
 
 ### 5. Boot and install macOS
 
-- [ ] Explain how to select the installer from the OpenCore picker.
-- [ ] Add the exact installation flow and any reboot stages.
-- [ ] Document common errors and their known fixes.
-- [ ] Explain how to boot the installed system for the first time.
-
-**Steps / troubleshooting:**
-
-1. `TODO`
-2. `TODO`
-3. `TODO`
+- Press Space in the OpenCore boot menu and select macOS Recovery.
+- You should eventually boot into macOS recovery and select your language and connect to a WiFi by clicking on network icon on top bar.
+- Open Disk Utillity and select your partition you created and format it as **APFS**.
+- Select Install macOS and install it into the partition you created and it will download and install macOS.
 
 ### 6. Post-install configuration
 
-- [ ] Configure and verify graphics acceleration.
-- [ ] Configure and verify audio output and microphone input.
-- [ ] Configure and verify Wi-Fi and Bluetooth.
-- [ ] Complete USB port mapping and test every physical port.
-- [ ] Test touchscreen, keyboard, trackpad, camera, battery reporting, sleep, and wake.
-- [ ] Document any power-management or temperature tuning.
-- [ ] Explain how to move the EFI to the internal drive, if applicable, and how to recover if it fails.
-
-**Steps / results:**
+- After it boots into the macOS setup menu set it up normally.
+- If colors look weird, go to settings -> Display Settings -> Color profile and set color profile to sRGB or generic RGB.
+- If sound dosent work, go to audio settings and select audio device as the second **Internal Speaker** option.
+- Go to settings and set sleep to never or a very long time and disable hibernation.
+ 
+### 7. Installing EFI and known issues
 
 - `TODO`
-
-### 7. Updating, recovery, and known issues
-
-- [ ] State which macOS updates have been tested and which have not.
-- [ ] Explain how to back up and restore the working EFI.
-- [ ] Record known issues, workarounds, and regression risks.
-- [ ] Explain how to collect logs for troubleshooting without posting personal identifiers.
 
 **Known issues:**
 
