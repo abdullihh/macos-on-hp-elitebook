@@ -60,8 +60,8 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 
 **Download links:**
 
-- `Download The latest MacOS.Tahoe.zip from [Release](https://github.com/abdullihh/macos-on-hp-elitebook/releases/)`
-- `Download [Rufus](https://rufus.ie/en/#download)`
+- Download The latest MacOS.Tahoe.zip from [Release](https://github.com/abdullihh/macos-on-hp-elitebook/releases/)
+- Download [Rufus](https://rufus.ie/en/#download)
 
 ### 2. Create the installer
 
