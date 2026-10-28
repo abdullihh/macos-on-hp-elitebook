@@ -23,7 +23,7 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 
 ## Hardware compatibility
 
-Update the **Status** and **Notes** columns as you test each feature on your own installation. This table describes the current build and is not a guarantee that every EliteBook 1040 G7 will behave identically.
+This table describes the current build and is not a guarantee that every EliteBook 1040 G7 will behave identically.
 
 | Component / feature | Status | Notes |
 |---|---|---|
@@ -122,9 +122,7 @@ USB Drive/
 
 ## Technical information
 
-This section is a place to document the exact software, files, and configuration used. Verify every entry against the EFI that you intend to publish; do not treat an example or an old configuration as authoritative.
-
-### Core versions and settings
+### OpenCore versions and settings
 
 | Setting | Current value | Notes |
 |---|---|---|
@@ -138,8 +136,6 @@ This section is a place to document the exact software, files, and configuration
 | USB mapping | USBToolBox Tool | Record the final map and physical port layout once verified. |
 
 ### Kernel extensions (kexts)
-
-List the **exact** kexts included in `EFI/OC/Kexts`, their versions, download/source links, purpose, and any dependencies. Remove rows that do not apply and add every kext in the final EFI.
 
 | Kext | Version | Purpose | Source | Included / tested? |
 |---|---|---|---|---|
@@ -177,7 +173,6 @@ List the **exact** kexts included in `EFI/OC/Kexts`, their versions, download/so
 
 ## Credits
 
-Thanks to the people and projects whose documentation, tools, patches, and troubleshooting made this build possible.
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
 - `TODO — name / project` — `TODO: contribution and link`
