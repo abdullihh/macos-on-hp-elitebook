@@ -52,11 +52,11 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 
 ### 1. Preparation
 
-- [ ] Confirm the exact laptop model.
-- [ ] Back up personal files and create recovery/install media for existing operating systems.
-- [ ] Record the current BIOS/UEFI version and settings.
-- [ ] Download the required tools and files; document the source and version of each.
-- [ ] This guide is for DualBooting macOS and Windows. Make sure you have at least 64GB free space on your SSD for macOS.
+- Confirm the exact laptop model.
+- Back up personal files and create recovery/install media for existing operating systems.
+- Record the current BIOS/UEFI version and settings.
+- Download the required tools and files; document the source and version of each.
+- This guide is for DualBooting macOS and Windows. Make sure you have at least 64GB free space on your SSD for macOS.
 
 **Download links:**
 
@@ -65,35 +65,22 @@ Update the **Status** and **Notes** columns as you test each feature on your own
 
 ### 2. Create the installer
 
-- [ ] Document how to obtain the macOS installer/recovery files.
-- [ ] Document how to prepare the USB installer.
-- [ ] Include integrity checks where applicable.
-- [ ] Explain the required folder layout and any files that must be added manually.
-
-**Steps / commands:**
-
-1. `TODO`
-2. `TODO`
-3. `TODO`
-
-### 3. Build and configure the EFI
-
-- [ ] Explain how the EFI was generated or assembled.
-- [ ] Document the OpenCore version and configuration approach.
-- [ ] List required kexts, ACPI files, drivers, and their order where relevant.
-- [ ] Explain important `config.plist` changes, including graphics, audio, Wi-Fi, USB, and power management.
-- [ ] Remove all personal SMBIOS identifiers before sharing the EFI.
-
-**EFI structure:**
+- Extract the MacOS.Tahoe.zip.
+- Run the Download.bat inside the macrecovery folder and it should download the com.apple.recovery.boot folder.
+- Get an USB drive and open Rufus while it is plugged in.
+- Format the USB as Non-bootable, FAT32 and GPT.
+- Copy the EFI and com.apple.recovery.boot folders into the root of the USB drive.
+- 
+**USB structure:**
 
 ```text
-EFI/
-└── OC/
-    ├── ACPI/
-    ├── Drivers/
-    ├── Kexts/
-    ├── Tools/
-    └── config.plist
+USB Drive/
+├── EFI/
+    ├── BOOT/
+    └── OC/
+└── com.apple.recovery.boot/
+    ├── BaseSystem.dmg
+    └── BaseSystem.chunklist
 ```
 
 `TODO: explain which files are required and how to obtain/build them.`
