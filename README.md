@@ -83,8 +83,6 @@ USB Drive/
     └── BaseSystem.chunklist
 ```
 
-`TODO: explain which files are required and how to obtain/build them.`
-
 ### 3. Partition Storage
 
 - Open Start menu and search **disk management** and press enter.
