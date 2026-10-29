@@ -60,7 +60,7 @@ This table describes the current build and is not a guarantee that every EliteBo
 
 **Download links:**
 
-- Download The latest MacOS.Tahoe.zip from [Release](https://github.com/abdullihh/macos-on-hp-elitebook/releases/)
+- Download The latest MacOS.Tahoe.zip from [Releases](https://github.com/abdullihh/macos-on-hp-elitebook/releases/)
 - Download [Rufus](https://rufus.ie/en/#download)
 
 ### 2. Create the installer
