@@ -1,4 +1,4 @@
-# (WIP) HP EliteBook x360 1040 G7 macOS 26 Tahoe
+# HP EliteBook x360 1040 G7 macOS 26 Tahoe
 
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
@@ -16,7 +16,7 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 | Audio | Realtek ALC285 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
 | Display | 14 Inch 1080p IPS Touchscreen |
-| Camera | Intel HD Camera |
+| Camera | FHD Camera |
 | macOS version | macOS 26 Tahoe |
 | Bootloader | OpenCore 1.0.8 |
 | SMBIOS | MacBookPro16,2 (2020 13 Inch Macbook Pro) |
