@@ -111,10 +111,15 @@ USB Drive/
 - If colors look weird, go to settings -> Display Settings -> Color profile and set color profile to sRGB or generic RGB.
 - If sound dosent work, go to audio settings and select audio device as the second **Internal Speaker** option.
 - Go to settings and set sleep to never or a very long time and disable hibernation.
+- MacOS Should be running now but it will only be bootable while the USB is connected.
  
-### 7. Installing EFI and known issues
+### 7. Installing EFI (last step)
 
-- `TODO`
+- Download [OC Auxiliary Tools](https://github.com/ic005k/OCAuxiliaryTools/releases)
+- Open it in macOS and click on Edit -> Mount ESP then it should mount the EFI partition as NO NAME.
+- Back up everything in that partition before changing anything as it contains important system firmware.
+- Now copy the macOS EFI folder into your EFI partition and merge the folders.
+- Now when you restart it should boot you straight to OpenCore Boot Manager instead of Windows.
 
 **Known issues:**
 
