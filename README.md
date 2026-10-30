@@ -156,14 +156,14 @@ USB Drive/
 ### ACPI files
 
 | File |
-|---|---|---|---|
+|---|
 | `SSDT-*.aml` |
 | `Other ACPI files` |
 
 ### OpenCore drivers and tools
 
-| File | Purpose | Notes |
-|---|---|---|
+| File |
+|---|
 | `OpenRuntime.efi` |
 | `OpenCanopy.efi` |
 | `Other drivers/tools` |
