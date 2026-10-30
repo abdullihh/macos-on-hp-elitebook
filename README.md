@@ -44,6 +44,7 @@ This table describes the current build and is not a guarantee that every EliteBo
 | USB-C / Thunderbolt | ✅ Working | Complete USB mapping works |
 | HDMI / external display | 🟡 Partially working | Native HDMI port does not but USB-C to HDMI converter and Airplay works |
 | Ethernet | ✅ Working  | Depends on the adapter or dock used. |
+| Airplay/Airdrop | ✅ Working  | Works perfectly. |
 | Sleep / standby | 🟡 Partially working  | Laptop successfully goes to sleep but waking up sometimes cause problems |
 | Microphone | ⛔ Not working | Internal microphone does not work. But USB mics work |
 | Fingerprint reader | ⛔ Not working | macOS does not accept any fingerprint reader other than official Apple ones |
@@ -116,14 +117,14 @@ USB Drive/
 ### 7. Installing EFI (last step)
 
 - Download [OC Auxiliary Tools](https://github.com/ic005k/OCAuxiliaryTools/releases)
-- Open it in macOS and click on Edit -> Mount ESP then it should mount the EFI partition as NO NAME.
-- Back up everything in that partition before changing anything as it contains important system firmware.
+- Open it in macOS and click on Edit -> Mount ESP then it should mount the EFI partition as NO NAME or EFI.
+- Back up everything in that partition to an external USB drive before changing anything as it contains important system firmware.
 - Now copy the macOS EFI folder into your EFI partition and merge the folders.
 - Now when you restart it should boot you straight to OpenCore Boot Manager instead of Windows.
 
-**Known issues:**
+**Troubleshooting**
 
-- `TODO`
+- If the laptop fails to boot, Put your backed up original EFI into a FAT32 USB and boot from there then replace your modified EFI partition with the backup.
 
 ## Technical information
 
