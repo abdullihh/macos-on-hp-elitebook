@@ -87,9 +87,9 @@ USB Drive/
 
 - Open Start menu and search **disk management** and press enter.
 - Right click the Partition you want to shrink and select **Shrink Volume**
-- Shrink it by the amount you want e.g. 65536MB for 64GB.
+- Shrink it by the amount you want e.g. 131072MB for 128GB.
 - Right click on the unallocated space you created and select **New Simple Volume**.
-- Click next until you get to format screen and format it as **exFAT**.
+- Click next and when you get to format screen and format it as **exFAT**.
 
 ### 4. BIOS / UEFI configuration
 
@@ -108,7 +108,7 @@ USB Drive/
 ### 6. Post-install configuration
 
 - After it boots into the macOS setup menu set it up normally.
-- If colors look weird, go to settings -> Display Settings -> Color profile and set color profile to sRGB or generic RGB.
+- If colors look weird, go to settings -> Display Settings -> Color profile and set color profile to **sRGB or generic RGB**.
 - If sound dosent work, go to audio settings and select audio device as the second **Internal Speaker** option.
 - Go to settings and set sleep to never or a very long time and disable hibernation.
 - MacOS Should be running now but it will only be bootable while the USB is connected.
@@ -132,7 +132,7 @@ USB Drive/
 | Setting | Current value | Notes |
 |---|---|---|
 | macOS | macOS 26 Tahoe | Record the exact build number from **About This Mac** / System Information. |
-| OpenCore | 1.0.8 *(reported)* | Verify the version in the published EFI. |
+| OpenCore | 1.0.8 | Verify the version in the published EFI. |
 | Configuration tool | OpenCore Simplify / OC Auxiliary Tools / OpenCore PKG | `TODO: state the tool actually used and version` |
 | SMBIOS | MacBookPro16,2 | 2020 13 Inch Macbook Pro |
 | `AAPL,ig-platform-id` | `00009B3E` *(reported)* | Confirm the current `DeviceProperties` value and data encoding. |
@@ -142,31 +142,31 @@ USB Drive/
 
 ### Kernel extensions (kexts)
 
-| Kext | Version | Purpose | Source | Included / tested? |
-|---|---|---|---|---|
-| `Lilu.kext` | `TODO` | Patching framework used by several plugins | `TODO` | `TODO` |
-| `VirtualSMC.kext` | `TODO` | SMC emulation | `TODO` | `TODO` |
-| `WhateverGreen.kext` | `TODO` | Intel graphics support and patches | `TODO` | `TODO` |
-| `AirportItlwm.kext` | `TODO` | Intel Wi-Fi | `TODO` | `TODO` |
-| `AppleALC.kext` **or** chosen audio solution | `TODO` | Audio support, if used by this EFI | `TODO` | `TODO` |
-| `USBToolBox.kext` | `TODO` | USB mapping support, if used | `TODO` | `TODO` |
-| `UTBMap.kext` | `TODO` | USB port map, if used | `TODO` | `TODO` |
-| `Other kexts` | `TODO` | `TODO` | `TODO` | `TODO` |
+| Kext | Version |
+|---|---|
+| `Lilu.kext` | `TODO` |
+| `VirtualSMC.kext` | `TODO` |
+| `WhateverGreen.kext` | `TODO` |
+| `AirportItlwm.kext` | `TODO` |
+| `AppleALC.kext` **or** chosen audio solution | `TODO` |
+| `USBToolBox.kext` | `TODO` |
+| `UTBMap.kext` | `TODO` |
+| `Other kexts` | `TODO` |
 
 ### ACPI files
 
-| File | Purpose | Source / generation method | Notes |
+| File |
 |---|---|---|---|
-| `SSDT-*.aml` | `TODO` | `TODO` | `TODO` |
-| `Other ACPI files` | `TODO` | `TODO` | `TODO` |
+| `SSDT-*.aml` |
+| `Other ACPI files` |
 
 ### OpenCore drivers and tools
 
 | File | Purpose | Notes |
 |---|---|---|
-| `OpenRuntime.efi` | Runtime support, if included | Confirm against the final EFI. |
-| `OpenCanopy.efi` | Graphical boot picker, if included | Requires its matching resources and configuration. |
-| `Other drivers/tools` | `TODO` | `TODO` |
+| `OpenRuntime.efi` |
+| `OpenCanopy.efi` |
+| `Other drivers/tools` |
 
 ### Hardware identifiers and useful diagnostics
 
