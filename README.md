@@ -2,7 +2,7 @@
 
 ![Desktop preview](/images/desktop.png "About Mac")
 
-This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
+This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations.
 
 > **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
 
@@ -14,7 +14,7 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 | CPU | Intel Core i5-10310U (4 cores / 8 threads 1.7-4.4 GHz) |
 | Integrated graphics | Intel UHD Graphics Gen 9.5 rev 5 |
 | Memory | 16 GB dual-channel DDR4 |
-| Internal storage | 1 TB NVMe SSD |
+| Internal storage | 1 TB Gen 3 NVMe SSD |
 | Audio | Realtek ALC285 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
 | Display | 14 Inch 1080p IPS Touchscreen |
@@ -121,7 +121,7 @@ USB Drive/
 
 - Download [OC Auxiliary Tools](https://github.com/ic005k/OCAuxiliaryTools/releases)
 - Open it in macOS and click on Edit -> Mount ESP then it should mount the EFI partition as NO NAME or EFI.
-- Back up everything in that partition to an external USB drive before changing anything as it contains important system firmware.
+- Back up everything in that partition to an external USB drive before changing anything as it contains important Firmware files.
 - Now copy the macOS EFI folder into your EFI partition and merge the folders.
 - Now when you restart it should boot you straight to OpenCore Boot Manager instead of Windows.
 
