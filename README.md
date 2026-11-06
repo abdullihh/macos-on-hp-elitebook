@@ -12,7 +12,7 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 |---|---|
 | Laptop | HP EliteBook x360 1040 G7 |
 | CPU | Intel Core i5-10310U (4 cores / 8 threads 1.7-4.4 GHz) |
-| Integrated graphics | Intel UHD Graphics 630 |
+| Integrated graphics | Intel UHD Graphics Gen 9.5 rev 5 |
 | Memory | 16 GB dual-channel DDR4 |
 | Internal storage | 1 TB NVMe SSD |
 | Audio | Realtek ALC285 |
@@ -138,7 +138,7 @@ USB Drive/
 | OpenCore | 1.0.8 | Verify the version in the published EFI. |
 | Configuration tool | OC Auxiliary Tools | Used Opcore simplify as the base |
 | SMBIOS | MacBookPro16,2 | 2020 13 Inch Intel Macbook Pro |
-| Audio `layout-id` | `71` | Layout for HP Spectre |
+| Audio layout-id | `71 | Layout for HP Spectre |
 | USB mapping | USBToolBox Tool with USBToolBox kext| Mapped to 12 internal ports |
 
 ### Kernel extensions (kexts)
@@ -172,6 +172,6 @@ USB Drive/
 
 ## Credits
 
-- `TODO — name / project` — `TODO: contribution and link`
-- `TODO — name / project` — `TODO: contribution and link`
-- `TODO — name / project` — `TODO: contribution and link`
+- [Swazen's repository](https://github.com/swazen/HP-Elitebook-x360-1040-G7-opencore-Ventura-Hackintosh) — For the CPU mask and ID
+- [OpenCorePKG](https://github.com/acidanthera/opencorepkg) - For the files and drivers
+- [OpenCore Simplify](https://github.com/lzhoang2801/OpCore-Simplify) - For the base EFI before many modifications and optimizations were applied
