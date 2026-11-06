@@ -134,50 +134,41 @@ USB Drive/
 
 | Setting | Current value | Notes |
 |---|---|---|
-| macOS | macOS 26 Tahoe | Record the exact build number from **About This Mac** / System Information. |
+| macOS | macOS 26.7.2 Tahoe | Originally 26.7.1 but updated it later |
 | OpenCore | 1.0.8 | Verify the version in the published EFI. |
-| Configuration tool | OpenCore Simplify / OC Auxiliary Tools / OpenCore PKG | `TODO: state the tool actually used and version` |
-| SMBIOS | MacBookPro16,2 | 2020 13 Inch Macbook Pro |
-| `AAPL,ig-platform-id` | `00009B3E` *(reported)* | Confirm the current `DeviceProperties` value and data encoding. |
-| Audio `layout-id` | `71` *(reported)* | Confirm against the working `config.plist`. |
-| Boot arguments | `-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling` *(reported)* | Re-test each argument and remove anything no longer needed. |
-| USB mapping | USBToolBox Tool | Record the final map and physical port layout once verified. |
+| Configuration tool | OC Auxiliary Tools | Used Opcore simplify as the base |
+| SMBIOS | MacBookPro16,2 | 2020 13 Inch Intel Macbook Pro |
+| Audio `layout-id` | `71` | Layout for HP Spectre |
+| USB mapping | USBToolBox Tool with USBToolBox kext| Mapped to 12 internal ports |
 
 ### Kernel extensions (kexts)
 
 | Kext | Version |
 |---|---|
-| `Lilu.kext` | `TODO` |
-| `VirtualSMC.kext` | `TODO` |
-| `WhateverGreen.kext` | `TODO` |
-| `AirportItlwm.kext` | `TODO` |
-| `AppleALC.kext` **or** chosen audio solution | `TODO` |
-| `USBToolBox.kext` | `TODO` |
-| `UTBMap.kext` | `TODO` |
-| `Other kexts` | `TODO` |
+| Lilu.kext | TODO |
+| VirtualSMC.kext | TODO |
+| WhateverGreen.kext | TODO |
+| AirportItlwm.kext | TODO |
+| AppleALC.kext | TODO |
+| USBToolBox.kext | TODO |
+| UTBMap.kext | TODO |
+| Other kexts | TODO |
 
 ### ACPI files
 
 | File |
 |---|
-| `SSDT-*.aml` |
-| `Other ACPI files` |
+| SSDT-*.aml |
+| Other ACPI files |
 
 ### OpenCore drivers and tools
 
 | File |
 |---|
-| `OpenRuntime.efi` |
-| `OpenCanopy.efi` |
-| `Other drivers/tools` |
-
-### Hardware identifiers and useful diagnostics
-
-- PCI device IDs: `TODO`
-- Audio codec / layout details: `layout id 71`
-- USB controller and port map: `TODO`
-- Wi-Fi / Bluetooth chipset and firmware details: `TODO`
-- Relevant OpenCore logs or troubleshooting notes: `TODO`
+| OpenRuntime.efi |
+| OpenCanopy.efi |
+| OpenShell.efi |
+| todo |
 
 ## Credits
 
