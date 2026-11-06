@@ -323,7 +323,7 @@
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,ig-platform-id</key>
-                    <data>CQClPg==</data>
+                    <data>AACbPg==</data>
                     <key>device-id</key>
                     <data>mz4AAA==</data>
                     <key>framebuffer-fbmem</key>
@@ -1158,7 +1158,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling alcid=71 igfxrpc=1</string>
+                    <string>-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling alcid=71</string>
                     <key>csr-active-config</key>
                     <data>AwoAAA==</data>
                     <key>run-efi-updater</key>
