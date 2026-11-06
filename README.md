@@ -1,5 +1,7 @@
 # HP EliteBook x360 1040 G7 macOS 26 Tahoe
 
+![Desktop preview](/images/desktop.png "About Mac")
+
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
 > **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
