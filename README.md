@@ -1,5 +1,7 @@
 # HP EliteBook x360 1040 G7 macOS 26 Tahoe
 
+![Desktop preview](/images/desktop.png "About Mac")
+
 This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth and responsive MacBook Pro-like laptop running **macOS 26 Tahoe**. It documents the setup, configuration, working hardware, known limitations, and technical details so the process can be reproduced and improved.
 
 > **Disclaimer:** This is an experimental Hackintosh project for a specific laptop configuration. Hardware revisions, BIOS settings, EFI files, and software versions can change the result. Back up important data before changing partitions or firmware. Use this guide at your own risk.
@@ -10,14 +12,14 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 |---|---|
 | Laptop | HP EliteBook x360 1040 G7 |
 | CPU | Intel Core i5-10310U (4 cores / 8 threads 1.7-4.4 GHz) |
-| Integrated graphics | Intel UHD Graphics 630 |
+| Integrated graphics | Intel UHD Graphics Gen 9.5 rev 5 |
 | Memory | 16 GB dual-channel DDR4 |
 | Internal storage | 1 TB NVMe SSD |
 | Audio | Realtek ALC285 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
 | Display | 14 Inch 1080p IPS Touchscreen |
 | Camera | FHD Camera |
-| macOS version | macOS 26 Tahoe |
+| macOS version | macOS 26.7.2 Tahoe |
 | Bootloader | OpenCore 1.0.8 |
 | SMBIOS | MacBookPro16,2 (2020 13 Inch Macbook Pro) |
 
@@ -30,7 +32,7 @@ This table describes the current build and is not a guarantee that every EliteBo
 | macOS 26 Tahoe boot | ✅ Working | Boots using OpenCore. |
 | Intel UHD 630 graphics acceleration | ✅ Working | Graphics acceleration is enabled; macOS reports 1536 MB VRAM. |
 | Built-in display | ✅ Working | Set the display color profile to **sRGB** for correct colors on this setup. |
-| Touchscreen | ✅ Working | Basic touch input and Gestures work; Srolling has to be done with two fingers |
+| Touchscreen | ✅ Working | Basic touch input and Gestures work; Scrolling has to be done with two fingers |
 | Internal audio / speakers | ✅ Working | The correct output appears as the second **Internal Speaker** entry in Sound settings. |
 | Intel Wi-Fi | ✅ Working | Wi-Fi works from the native macOS WiFi menu. |
 | Bluetooth | ✅ Working | Works. Sometimes external mice can cause problems but that's Apple's fault |
@@ -101,7 +103,7 @@ USB Drive/
 
 ### 5. Boot and install macOS
 
-- Press Space in the OpenCore boot menu and select macOS Recovery.
+- **Press Space** in the OpenCore boot menu and select macOS Recovery.
 - You should eventually boot into macOS recovery and select your language and connect to a WiFi by clicking on network icon on top bar.
 - Open Disk Utillity and select your partition you created and format it as **APFS**.
 - Select Install macOS and install it into the partition you created and it will download and install macOS.
@@ -110,7 +112,8 @@ USB Drive/
 
 - After it boots into the macOS setup menu set it up normally.
 - If colors look weird, go to settings -> Display Settings -> Color profile and set color profile to **sRGB or generic RGB**.
-- If sound dosent work, go to audio settings and select audio device as the second **Internal Speaker** option.
+- If sound dosen't work, go to audio settings and select audio device as the second **Internal Speaker** option.
+- If scrolling is reversed, go to Trackpad settings and disable Natural scrolling.
 - Go to settings and set sleep to never or a very long time and disable hibernation.
 - MacOS Should be running now but it will only be bootable while the USB is connected.
  
@@ -132,53 +135,79 @@ USB Drive/
 
 | Setting | Current value | Notes |
 |---|---|---|
-| macOS | macOS 26 Tahoe | Record the exact build number from **About This Mac** / System Information. |
+| macOS | macOS 26.7.2 Tahoe | Originally 26.7.1 but updated it later |
 | OpenCore | 1.0.8 | Verify the version in the published EFI. |
-| Configuration tool | OpenCore Simplify / OC Auxiliary Tools / OpenCore PKG | `TODO: state the tool actually used and version` |
-| SMBIOS | MacBookPro16,2 | 2020 13 Inch Macbook Pro |
-| `AAPL,ig-platform-id` | `00009B3E` *(reported)* | Confirm the current `DeviceProperties` value and data encoding. |
-| Audio `layout-id` | `71` *(reported)* | Confirm against the working `config.plist`. |
-| Boot arguments | `-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling` *(reported)* | Re-test each argument and remove anything no longer needed. |
-| USB mapping | USBToolBox Tool | Record the final map and physical port layout once verified. |
+| Configuration tool | OC Auxiliary Tools | Used Opcore simplify as the base |
+| SMBIOS | MacBookPro16,2 | 2020 13 Inch Intel Macbook Pro |
+| Audio layout-id | 71 | Layout for HP Spectre |
+| USB mapping | USBToolBox Tool with USBToolBox kext| Mapped to 12 internal ports |
 
 ### Kernel extensions (kexts)
 
 | Kext | Version |
 |---|---|
-| `Lilu.kext` | `TODO` |
-| `VirtualSMC.kext` | `TODO` |
-| `WhateverGreen.kext` | `TODO` |
-| `AirportItlwm.kext` | `TODO` |
-| `AppleALC.kext` **or** chosen audio solution | `TODO` |
-| `USBToolBox.kext` | `TODO` |
-| `UTBMap.kext` | `TODO` |
-| `Other kexts` | `TODO` |
+| Lilu.kext | 1.7.3 |
+| VirtualSMC.kext | 1.3.9 |
+| AirportItlwm.kext | 2.4.0 |
+| AppleALC.kext | 1.9.9 |
+| BlueToolFixup.kext | 2.7.3 |
+| BrightnessKeys.kext | 1.0.4 |
+| CpuTscSync.kext | 1.1.3 |
+| ECEnabler.kext | 1.0.6 |
+| IntelBTPatcher.kext | 2.5.0 |
+| IntelBluetoothFirmware.kext | 2.5.0 |
+| NVMeFix.kext | 1.1.4 |
+| RestrictEvents.kext | 1.1.7 |
+| SMCBatteryManager.kext | 1.3.9 |
+| SMCLightSensor.kext | 1.3.9 |
+| SMCProcessor.kext | 1.3.9 |
+| SMCSuperIO.kext | 1.3.9 |
+| SimpleHDA.kext | 1.0.0 |
+| USBToolBox.kext | 1.2.0 |
+| VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext | 1 |
+| VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext | 1.1 |
+| VoodooI2C.kext | 2.9.1 |
+| VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext | 1.1.7 |
+| VoodooI2CHID.kext | 1 |
+| VoodooPS2Controller.kext | 2.3.8 |
+| VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput.kext | 1.1.7 |
+| VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext | 2.3.8 |
+| VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext | 2.3.8 |
+| VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext | 2.3.8 |
+| WhateverGreen.kext | 1.7.2 |
+| XHCI-unsupported.kext | 0.9.2 |
+| UTBMap.kext | 1.1 |
 
 ### ACPI files
 
-| File |
+| SSDT |
 |---|
-| `SSDT-*.aml` |
-| `Other ACPI files` |
+| SSDT-ALS0.aml |
+| SSDT-SBUS.aml |
+| SSDT-EC.aml |
+| SSDT-GPI0.aml |
+| SSDT-MCHC.aml |
+| SSDT-PLUG.aml |
+| SSDT-PNLF.aml |
+| SSDT-USB-Reset.aml |
+| SSDT-USBX.aml |
+| SSDT-XOSI.aml |
+| SSDT-RTCAWAC.aml |
 
 ### OpenCore drivers and tools
 
-| File |
+| EFI |
 |---|
-| `OpenRuntime.efi` |
-| `OpenCanopy.efi` |
-| `Other drivers/tools` |
-
-### Hardware identifiers and useful diagnostics
-
-- PCI device IDs: `TODO`
-- Audio codec / layout details: `layout id 71`
-- USB controller and port map: `TODO`
-- Wi-Fi / Bluetooth chipset and firmware details: `TODO`
-- Relevant OpenCore logs or troubleshooting notes: `TODO`
+| OpenRuntime.efi |
+| OpenCanopy.efi |
+| OpenShell.efi |
+| apfs_aligned.efi |
+| HfsPlus.efi |
+| ResetNvramEntry.efi |
+| AudioDxe.efi |
 
 ## Credits
 
-- `TODO — name / project` — `TODO: contribution and link`
-- `TODO — name / project` — `TODO: contribution and link`
-- `TODO — name / project` — `TODO: contribution and link`
+- [Swazen's repository](https://github.com/swazen/HP-Elitebook-x360-1040-G7-opencore-Ventura-Hackintosh) — For the CPU mask and ID
+- [OpenCorePKG](https://github.com/acidanthera/opencorepkg) - For the files and drivers
+- [OpenCore Simplify](https://github.com/lzhoang2801/OpCore-Simplify) - For the base EFI before many modifications and optimizations were applied
