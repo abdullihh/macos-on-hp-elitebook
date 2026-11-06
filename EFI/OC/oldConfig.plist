@@ -326,10 +326,6 @@
                     <data>CQClPg==</data>
                     <key>device-id</key>
                     <data>mz4AAA==</data>
-                    <key>enable-backlight-registers-fix</key>
-                    <data>AQAAAA==</data>
-                    <key>framebuffer-con0-pipe</key>
-                    <data>EgAAAA==</data>
                     <key>framebuffer-fbmem</key>
                     <data>AACQAA==</data>
                     <key>framebuffer-patch-enable</key>
@@ -337,7 +333,7 @@
                     <key>framebuffer-stolenmem</key>
                     <data>AAAwAQ==</data>
                     <key>model</key>
-                    <string>Intel(R) UHD Graphics 630</string>
+                    <string>Intel(R) UHD Graphics</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -1003,13 +999,13 @@
                 <key>LauncherPath</key>
                 <string>Default</string>
                 <key>PickerAttributes</key>
-                <integer>255</integer>
+                <integer>183</integer>
                 <key>PickerAudioAssist</key>
                 <false/>
                 <key>PickerMode</key>
                 <string>External</string>
                 <key>PickerVariant</key>
-                <string>Auto</string>
+                <string>Blackosx/BsxM1</string>
                 <key>PollAppleHotKeys</key>
                 <false/>
                 <key>ShowPicker</key>
@@ -1153,6 +1149,8 @@
                 <dict>
                     <key>ForceDisplayRotationInEFI</key>
                     <integer>0</integer>
+                    <key>StartupMute</key>
+                    <data>AA==</data>
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>bluetoothExternalDongleFailed</key>
@@ -1160,7 +1158,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling alcid=71 igfxonln=1</string>
+                    <string>-v debug=0x100 keepsyms=1 -igfxblt -vi2c-force-polling alcid=71 igfxrpc=1</string>
                     <key>csr-active-config</key>
                     <data>AwoAAA==</data>
                     <key>run-efi-updater</key>
@@ -1315,11 +1313,11 @@
                 <key>AudioCodec</key>
                 <integer>0</integer>
                 <key>AudioDevice</key>
-                <string>PciRoot(0x0)/Pci(0x1b,0x0)</string>
+                <string>PciRoot(0x0)/Pci(0x1f,0x3)</string>
                 <key>AudioOutMask</key>
-                <integer>1</integer>
+                <integer>2</integer>
                 <key>AudioSupport</key>
-                <false/>
+                <true/>
                 <key>DisconnectHda</key>
                 <false/>
                 <key>MaximumGain</key>
@@ -1398,6 +1396,18 @@
                     <false/>
                     <key>Path</key>
                     <string>OpenCanopy.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>LoadEarly</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>AudioDxe.efi</string>
                 </dict>
             </array>
             <key>Input</key>
