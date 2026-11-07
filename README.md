@@ -12,8 +12,8 @@ This repository is a guide to turning the **HP EliteBook 1040 G7** into a smooth
 |---|---|
 | Laptop | HP EliteBook x360 1040 G7 |
 | CPU | Intel Core i5-10310U (4 cores / 8 threads 1.7-4.4 GHz) |
-| Integrated graphics | Intel UHD Graphics Gen 9.5 rev 5 |
-| Memory | 16 GB dual-channel DDR4 |
+| Integrated graphics | Intel UHD Graphics Gen 9.5 rev 5 300-1150MHz |
+| Memory | 16 GB dual-channel LPDDR4 2933MHz |
 | Internal storage | 1 TB Gen 3 NVMe SSD |
 | Audio | Realtek ALC285 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
@@ -30,7 +30,7 @@ This table describes the current build and is not a guarantee that every EliteBo
 | Component / feature | Status | Notes |
 |---|---|---|
 | macOS 26 Tahoe boot | ✅ Working | Boots using OpenCore. |
-| Intel UHD 630 graphics acceleration | ✅ Working | Graphics acceleration is enabled; macOS reports 1536 MB VRAM. |
+| Intel UHD graphics acceleration | ✅ Working | Graphics acceleration is enabled; macOS reports 1536 MB VRAM. |
 | Built-in display | ✅ Working | Set the display color profile to **sRGB** for correct colors on this setup. |
 | Touchscreen | ✅ Working | Basic touch input and Gestures work; Scrolling has to be done with two fingers |
 | Internal audio / speakers | ✅ Working | The correct output appears as the second **Internal Speaker** entry in Sound settings. |
